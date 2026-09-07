@@ -1,0 +1,42 @@
+<div class="modal-header">
+  <h4 class="modal-title">Eliminar contacto</h4>
+
+  <button
+    type="button"
+    class="btn-close"
+    aria-label="Cerrar"
+    (click)="activeModal.dismiss(false)">
+  </button>
+</div>
+
+<div class="modal-body">
+
+  <p>
+    ¿Está seguro de que desea eliminar el contacto seleccionado?
+  </p>
+
+  @if (contact) {
+    <p class="mb-0">
+      <strong>{{ contact.name }}</strong>
+    </p>
+  }
+
+</div>
+
+<div class="modal-footer">
+
+  <button
+    type="button"
+    class="btn btn-secondary"
+    (click)="activeModal.dismiss(false)">
+    No
+  </button>
+
+  <button
+    type="button"
+    class="btn btn-danger"
+    (click)="activeModal.close(true)">
+    Sí, eliminar
+  </button>
+
+</div>
